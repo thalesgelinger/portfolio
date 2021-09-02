@@ -1,0 +1,97 @@
+.homeContainer {
+  background: #282a36;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  p {
+    font-size: 34.1229px;
+    line-height: 43px;
+    max-width: 700px;
+    min-width: 364px;
+    background: linear-gradient(
+      to left,
+      #ffcaca,
+      #ffedca,
+      #feffca,
+      #cbffca,
+      #cafcff,
+      #caccff,
+      #e8caff,
+      #ffcafd,
+      #ffcadd,
+      #ffcaca
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 10s ease-in-out infinite;
+    background-size: 400% 100%;
+
+    @keyframes rainbow {
+      0%,
+      100% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 100% 0;
+      }
+    }
+  }
+
+  .iconsContainer {
+    height: 100px;
+    position: relative;
+    background: linear-gradient(
+      to left,
+      #ffcaca,
+      #ffedca,
+      #feffca,
+      #cbffca,
+      #cafcff,
+      #caccff,
+      #e8caff,
+      #ffcafd,
+      #ffcadd,
+      #ffcaca
+    );
+    color: transparent;
+    animation: rainbow 10s ease-in-out infinite;
+    background-size: 400% 100%;
+
+    @keyframes rainbow {
+      0%,
+      100% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 100% 0;
+      }
+    }
+
+    display: flex;
+    align-items: center;
+
+    .mirror {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: #282a36;
+    }
+
+    div {
+      background: inherit;
+      margin-right: 32px;
+    }
+
+    svg {
+      // display: none;
+    }
+  }
+}
