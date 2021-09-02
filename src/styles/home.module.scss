@@ -5,12 +5,13 @@
   align-items: center;
   justify-content: center;
   color: white;
+  padding: 1rem;
 
   p {
-    font-size: 34.1229px;
-    line-height: 43px;
-    max-width: 700px;
-    min-width: 364px;
+    font-size: 2rem;
+    line-height: 2.6875rem;
+    max-width: 43.75rem;
+    min-width: 22.75rem;
     background: linear-gradient(
       to left,
       #ffcaca,
@@ -43,7 +44,7 @@
   }
 
   .iconsContainer {
-    height: 100px;
+    height: 6.45rem;
     position: relative;
     background: linear-gradient(
       to left,
@@ -87,11 +88,22 @@
 
     div {
       background: inherit;
-      margin-right: 32px;
+      margin-right: 2rem;
     }
 
-    svg {
-      // display: none;
+    .linkedin,
+    .github,
+    .instagram {
+      height: 3.75rem;
+      width: 3.75rem;
     }
+
+    .gmail {
+      height: 2.8125rem;
+      width: 3.75rem;
+    }
+  }
+  svg {
+    position: absolute;
   }
 }

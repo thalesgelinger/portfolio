@@ -9,30 +9,32 @@ import SvgWrapper from "../components/svg-wrapper/svg-wrapper";
 
 export default function Home({ text }) {
   return (
-    <>
-      <div className={styles.homeContainer}>
-        <div>
-          <p>
-            {text.hello} <b>Thales Gelinger</b> <br />
-            {text.main}
-            <br />
-            {text.cta}
-          </p>
-          <div className={styles.iconsContainer}>
-            <section className={styles.mirror}></section>
-            <div
-              style={{ height: 60, width: 60, clipPath: "url(#linkedin)" }}
-            ></div>
-            <div
-              style={{ height: 45, width: 60, clipPath: "url(#gmail)" }}
-            ></div>
-            <div
-              style={{ height: 60, width: 60, clipPath: "url(#github)" }}
-            ></div>
-            <div
-              style={{ height: 60, width: 60, clipPath: "url(#instagram)" }}
-            ></div>
-          </div>
+    <div className={styles.homeContainer}>
+      <div>
+        <p>
+          {text.hello} <b>Thales Gelinger</b> <br />
+          {text.main}
+          <br />
+          {text.cta}
+        </p>
+        <div className={styles.iconsContainer}>
+          <section className={styles.mirror}></section>
+          <div
+            className={styles.linkedin}
+            style={{ clipPath: "url(#linkedin)" }}
+          ></div>
+          <div
+            className={styles.gmail}
+            style={{ clipPath: "url(#gmail)" }}
+          ></div>
+          <div
+            className={styles.github}
+            style={{ clipPath: "url(#github)" }}
+          ></div>
+          <div
+            className={styles.instagram}
+            style={{ clipPath: "url(#instagram)" }}
+          ></div>
         </div>
       </div>
       <svg>
@@ -79,7 +81,7 @@ export default function Home({ text }) {
           </clipPath>
         </defs>
       </svg>
-    </>
+    </div>
   );
 }
 
