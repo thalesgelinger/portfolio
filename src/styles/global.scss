@@ -1,8 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap");
+@import "./variables.scss";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Red Rose", cursive;
+}
+
+body {
+  background-color: $background;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 55.5%;
+  }
+}
+@media (max-width: 380px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 48.5%;
+  }
+}
+@media (max-width: 280px) {
+  html {
+    font-size: 46.5%;
+  }
 }

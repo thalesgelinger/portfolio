@@ -1,109 +1,87 @@
+@import "./variables.scss";
 .homeContainer {
-  background: #282a36;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  padding: 1rem;
+  padding: 2.8rem;
+  div {
+    width: 100%;
+    max-width: 70rem;
+    p {
+      font-size: 3.2rem;
+      line-height: 4.3rem;
+      background: $rainbow-background;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: rainbow 10s ease-in-out infinite;
+      background-size: 400% 100%;
 
-  p {
-    font-size: 2rem;
-    line-height: 2.6875rem;
-    max-width: 43.75rem;
-    min-width: 22.75rem;
-    background: linear-gradient(
-      to left,
-      #ffcaca,
-      #ffedca,
-      #feffca,
-      #cbffca,
-      #cafcff,
-      #caccff,
-      #e8caff,
-      #ffcafd,
-      #ffcadd,
-      #ffcaca
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: rainbow 10s ease-in-out infinite;
-    background-size: 400% 100%;
+      @keyframes rainbow {
+        0%,
+        100% {
+          background-position: 0 0;
+        }
 
-    @keyframes rainbow {
-      0%,
-      100% {
-        background-position: 0 0;
-      }
-
-      50% {
-        background-position: 100% 0;
-      }
-    }
-  }
-
-  .iconsContainer {
-    height: 6.45rem;
-    position: relative;
-    background: linear-gradient(
-      to left,
-      #ffcaca,
-      #ffedca,
-      #feffca,
-      #cbffca,
-      #cafcff,
-      #caccff,
-      #e8caff,
-      #ffcafd,
-      #ffcadd,
-      #ffcaca
-    );
-    color: transparent;
-    animation: rainbow 10s ease-in-out infinite;
-    background-size: 400% 100%;
-
-    @keyframes rainbow {
-      0%,
-      100% {
-        background-position: 0 0;
-      }
-
-      50% {
-        background-position: 100% 0;
+        50% {
+          background-position: 100% 0;
+        }
       }
     }
 
-    display: flex;
-    align-items: center;
+    .iconsContainer {
+      height: 10.32rem;
+      position: relative;
+      background: $rainbow-background;
+      color: transparent;
+      animation: rainbow 10s ease-in-out infinite;
+      background-size: 400% 100%;
 
-    .mirror {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      background: #282a36;
-    }
+      @keyframes rainbow {
+        0%,
+        100% {
+          background-position: 0 0;
+        }
 
-    div {
-      background: inherit;
-      margin-right: 2rem;
-    }
+        50% {
+          background-position: 100% 0;
+        }
+      }
 
-    .linkedin,
-    .github,
-    .instagram {
-      height: 3.75rem;
-      width: 3.75rem;
-    }
+      display: flex;
+      align-items: center;
 
-    .gmail {
-      height: 2.8125rem;
-      width: 3.75rem;
+      .mirror {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: $background;
+      }
+
+      div {
+        background: inherit;
+        margin-right: 3.2rem;
+      }
+
+      .linkedin,
+      .github,
+      .instagram {
+        height: 6rem;
+        width: 6rem;
+      }
+
+      .gmail {
+        height: 4.5rem;
+        width: 6rem;
+      }
     }
   }
   svg {
     position: absolute;
+    z-index: -1;
   }
 }
