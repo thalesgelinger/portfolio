@@ -1,9 +1,9 @@
-import styles from "../styles/home.module.scss";
-import content from "../assets/texts/content.json";
-
 import React from "react";
+import styles from "../styles/home.module.scss";
+
 import { ClipPathIcons } from "../components/svg-wrapper/clip-path-icons";
 import { Icon } from "../components/icon/icon";
+import content from "../assets/texts/content.json";
 
 export default function Home({ text }) {
   const iconsData = [
@@ -41,7 +41,7 @@ export default function Home({ text }) {
         <div className={styles.iconsContainer}>
           <section className={styles.mirror}></section>
           {iconsData.map((icon, key) => (
-            <Icon key={key} {...icon} />
+            <Icon key={key.toString()} {...icon} />
           ))}
         </div>
       </div>
