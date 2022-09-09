@@ -1,59 +1,59 @@
 import React from "react";
 import styles from "../styles/home.module.scss";
-
-import { ClipPathIcons } from "../components/svg-wrapper/clip-path-icons";
-import { Icon } from "../components/icon/icon";
-import content from "../assets/texts/content.json";
-
+import { Icon, IconsTypes } from "../components/icon/icon";
+import Image from "next/image";
+import Link from "next/link";
 export default function Home({ text }) {
   const iconsData = [
     {
+      name: "linkedin",
       url: "https://www.linkedin.com/in/thalesgelinger",
-      clipPath: "url(#linkedin)",
-      className: styles.linkedin,
     },
     {
+      name: "gmail",
       url: "mailto: thalesgelinger@gmail.com",
-      clipPath: "url(#gmail)",
-      className: styles.gmail,
     },
     {
+      name: "github",
       url: "https://github.com/thalesgelinger",
-      clipPath: "url(#github)",
-      className: styles.github,
     },
     {
+      name: "instagram",
       url: "https://www.instagram.com/thalesgelinger/",
-      clipPath: "url(#instagram)",
-      className: styles.instagram,
     },
-  ];
+  ] as { url: string; name: keyof IconsTypes }[];
 
   return (
     <div className={styles.homeContainer}>
-      <div>
-        <p>
-          {text.hello} <b>Thales Gelinger</b> <br />
-          {text.main}
-          <br />
-          {text.cta}
-        </p>
+      <section className={styles.main}>
+        <header>
+          <Image src="/images/me.jpeg" width={150} height={150} />
+          <aside>
+            <h1>Hello I'm Thales</h1>
+            <h3>The JS Witcher</h3>
+          </aside>
+        </header>
+        <article>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
+            adipisci blanditiis delectus asperiores dolores ipsa dignissimos
+            accusantium. Animi, ipsam sint illo rem exercitationem soluta
+            laudantium ipsa quisquam quia voluptas minima!
+          </p>
+        </article>
         <div className={styles.iconsContainer}>
-          <section className={styles.mirror}></section>
-          {iconsData.map((icon, key) => (
-            <Icon key={key.toString()} {...icon} />
+          {iconsData.map(({ name, url }, key) => (
+            <span>
+              <Link href={url}>
+                <Icon key={key.toString()} name={name} size={40} />
+              </Link>
+            </span>
           ))}
         </div>
-      </div>
-      <ClipPathIcons />
+      </section>
+      <section className={styles.device}>
+        <img src={"/images/android-frame.png"} />
+      </section>
     </div>
   );
-}
-
-export async function getStaticProps(context) {
-  return {
-    props: {
-      text: content["en"],
-    },
-  };
 }

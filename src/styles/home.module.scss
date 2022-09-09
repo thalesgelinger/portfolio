@@ -1,89 +1,67 @@
 @import "./variables.scss";
-.homeContainer {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  padding: 2.8rem;
-  div {
-    width: 100%;
-    max-width: 70rem;
-    p {
-      font-size: 3.2rem;
-      line-height: 4.3rem;
-      background: $rainbow-background;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: rainbow 10s ease-in-out infinite;
-      background-size: 400% 100%;
 
-      @keyframes rainbow {
-        0%,
-        100% {
-          background-position: 0 0;
+.homeContainer {
+  display: flex;
+  padding: 10vh 20vw;
+
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    margin-right: 2rem;
+    header {
+      display: flex;
+
+      img {
+        border-radius: 50%;
+        margin-right: 2rem;
+      }
+
+      aside {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        align-items: start;
+        justify-content: center;
+        padding: 1rem;
+
+        h1 {
+          font-size: 4rem;
         }
 
-        50% {
-          background-position: 100% 0;
+        h3 {
+          font-size: 3rem;
         }
       }
+
     }
+
+  article {
+    flex:1;
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 2rem;
+      padding: 1rem;
+      line-height: 4rem;
+    }
+  }
 
     .iconsContainer {
-      height: 10.32rem;
-      position: relative;
-      background: $rainbow-background;
-      color: transparent;
-      animation: rainbow 10s ease-in-out infinite;
-      background-size: 400% 100%;
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 2rem;
-      // align-items: center;
-      place-items: center;
-
-      @keyframes rainbow {
-        0%,
-        100% {
-          background-position: 0 0;
-        }
-
-        50% {
-          background-position: 100% 0;
-        }
-      }
-
-      .mirror {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background: $background;
-      }
-
-      a {
-        cursor: pointer;
-        background: inherit;
-      }
-
-      .linkedin,
-      .github,
-      .instagram {
-        height: 6rem;
-        width: 6rem;
-      }
-
-      .gmail {
-        height: 4.5rem;
-        width: 6rem;
+      span {
+        margin:0 1rem;
       }
     }
+
   }
-  svg {
-    position: absolute;
-    z-index: -1;
+
+
+  .device {
+    img {
+      height: 80vh
+    };
   }
 }
+
