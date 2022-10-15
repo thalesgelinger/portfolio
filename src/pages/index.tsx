@@ -3,6 +3,7 @@ import styles from "../styles/home.module.scss";
 import { Icon, IconsTypes } from "../components/icon/icon";
 import Image from "next/image";
 import Link from "next/link";
+import { Device } from "../components";
 export default function Home({ text }) {
   const iconsData = [
     {
@@ -25,35 +26,35 @@ export default function Home({ text }) {
 
   return (
     <div className={styles.homeContainer}>
-      <section className={styles.main}>
-        <header>
-          <Image src="/images/me.jpeg" width={150} height={150} />
-          <aside>
-            <h1>Hello I'm Thales</h1>
-            <h3>The JS Witcher</h3>
-          </aside>
-        </header>
-        <article>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
-            adipisci blanditiis delectus asperiores dolores ipsa dignissimos
-            accusantium. Animi, ipsam sint illo rem exercitationem soluta
-            laudantium ipsa quisquam quia voluptas minima!
-          </p>
-        </article>
-        <div className={styles.iconsContainer}>
-          {iconsData.map(({ name, url }, key) => (
-            <span>
+      <div className={styles.center}>
+        <section className={styles.main}>
+          <header>
+            <img src="/images/me.jpeg" />
+            <aside>
+              <h1>Hello I'm Thales</h1>
+              <h3>🪄 And i like to make magic with code </h3>
+            </aside>
+          </header>
+          <article>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Reiciendis adipisci blanditiis delectus asperiores dolores ipsa
+              dignissimos accusantium. Animi, ipsam sint illo rem exercitationem
+              soluta laudantium ipsa quisquam quia voluptas minima!
+            </p>
+          </article>
+          <div className={styles.iconsContainer}>
+            {iconsData.map(({ name, url }, key) => (
               <Link href={url}>
-                <Icon key={key.toString()} name={name} size={40} />
+                <span>
+                  <Icon key={key.toString()} name={name} size={40} />
+                </span>
               </Link>
-            </span>
-          ))}
-        </div>
-      </section>
-      <section className={styles.device}>
-        <img src={"/images/android-frame.png"} />
-      </section>
+            ))}
+          </div>
+        </section>
+        <Device />
+      </div>
     </div>
   );
 }

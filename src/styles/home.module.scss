@@ -1,67 +1,101 @@
 @import "./variables.scss";
 
 .homeContainer {
+  width: 100%;
+  min-width: 370px;
+  height: 100vh;
   display: flex;
-  padding: 10vh 20vw;
+  color: white;
+  align-items: center;
+  justify-content: center;
 
+  @media (max-width: 645px) {
+    text-align: center;
+  }
 
-  .main {
+  .center {
+
+    width: 80%;
+    height: 80vh;
     display: flex;
-    flex-direction: column;
-    height: 60vh;
-    margin-right: 2rem;
-    header {
-      display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
-      img {
-        border-radius: 50%;
-        margin-right: 2rem;
+    .main {
+      display: flex;
+      flex-direction: column;
+      margin-right: 2rem;
+      min-height: 60vh;
+      max-height: 80vh;
+      max-width: 500px;
+      width: 100%;
+
+      header {
+        display: flex;
+
+        @media (max-width: 645px) {
+          flex-wrap: wrap;
+        }
+
+        img {
+          height: 150px;
+          border-radius: 50%;
+          margin-right: 2rem;
+
+          @media (max-width: 768px) {
+            display: none;
+          }
+
+        }
+
+        aside {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          align-items: start;
+          justify-content: center;
+          padding: 1rem;
+
+
+          h1 {
+            font-size: 4rem;
+
+            @media (max-width: 645px) {
+              margin: 0 auto;
+            }
+          }
+
+          h3 {
+            font-size: 3rem;
+          }
+        }
+
       }
 
-      aside {
+      article {
+        flex: 1;
         display: flex;
         align-items: center;
-        flex-direction: column;
-        width: 100%;
-        align-items: start;
-        justify-content: center;
-        padding: 1rem;
 
-        h1 {
-          font-size: 4rem;
+        p {
+          font-size: 2rem;
+          padding: 1rem;
+          line-height: 4rem;
+        }
+      }
+
+      .iconsContainer {
+        span {
+          margin: 0 1rem;
         }
 
-        h3 {
-          font-size: 3rem;
-        }
+        margin: 2rem 0;
       }
 
     }
 
-  article {
-    flex:1;
-    display: flex;
-    align-items: center;
-    p {
-      font-size: 2rem;
-      padding: 1rem;
-      line-height: 4rem;
-    }
   }
 
-    .iconsContainer {
-      span {
-        margin:0 1rem;
-      }
-    }
-
-  }
-
-
-  .device {
-    img {
-      height: 80vh
-    };
-  }
 }
-
