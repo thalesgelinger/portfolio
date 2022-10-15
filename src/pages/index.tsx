@@ -55,6 +55,7 @@ export default function Home({ text }) {
         </section>
         <Device />
       </div>
+      <img className={styles.jolteon} src="/images/jolteon.gif" />
     </div>
   );
 }
