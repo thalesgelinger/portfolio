@@ -1,9 +1,8 @@
 .device {
   position: relative;
-  color: black;
 
   div {
-    background-color: #ffffff;
+    background: linear-gradient(180deg, #A5A5A5 0%, rgba(165, 165, 165, 0.520833) 100%);
     border-radius: 8%;
     height: 98%;
     width: 98%;
@@ -25,6 +24,7 @@
     .appsContainer {
       width: 100%;
       height: 100%;
+      background: transparent;
     }
 
   }
